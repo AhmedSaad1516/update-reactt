@@ -1,16 +1,10 @@
-import React from 'react';
-import SideBar from '../side-bar/sideBar';
-
 function Home() {
     return (
-       <>
-       <div >
-       <SideBar/>
-       </div>
-   
-        
-       </>
+      <div className="w-100">
+        <img className="w-100" src="../../../src/assets/image/Screenshot (250).png" alt="Screenshot" />
+      </div>
     );
-}
-
-export default Home;
+  }
+  
+  export default Home;
+  

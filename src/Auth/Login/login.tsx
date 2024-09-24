@@ -60,8 +60,8 @@ function Login() {
                                     isInvalid={emailInvalid}
                                 />
                               
-                                {emailInvalid && <span className="error-message">{t('validatorsInputs.required')}</span>}
                             </div>
+                            {emailInvalid && <span className="error-message">{t('validatorsInputs.required')}</span>}
 
                             <div className="aa mb-3">
                                 <label htmlFor="password" className="form-label">
@@ -77,14 +77,15 @@ function Login() {
                                     required
                                     isInvalid={passwordInvalid}
                                 />
-                                {passwordInvalid && (
-                                    <span className="error-message">{t('validatorsInputs.required')}</span>
-                                )}
+                               
 
                                 <span className="password-toggle" onClick={togglePasswordVisibility}>
                                     <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
                                 </span>
                             </div>
+                            {passwordInvalid && (
+                                    <span className="error-message">{t('validatorsInputs.required')}</span>
+                                )}
 
                             <button type="submit" className="btn-login btn">
                                 {t('Login.buttonLogin', { defaultValue: 'Login' })}

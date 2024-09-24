@@ -32,15 +32,36 @@
     margin: 0px 100px;
 }
 @media screen and (min-width: 500px) and (max-width: 750px) {
-    [dir=ltr] .all-btn button {
+    [dir=ltr] .all-btn span {
         position: absolute;
         top: 27%;
         left: 40px;
     }
     
-    [dir=rtl] .all-btn button {
+    [dir=rtl] .all-btn span {
         position: absolute;
         top: 27%;
         right: 50px;
     }
 }
+
+@media screen  and (max-width: 1920px) {
+    [dir=ltr] .all-btn span {
+        position: absolute;
+        top: 60%;
+        left: 60%;
+    }
+    
+    [dir=rtl] .all-btn span {
+        position: absolute;
+        bottom: 36%;
+        right: 64%;
+
+    }
+    [dir=rtl] .all-btn .ss{
+        position: relative;
+        top: 0%;
+        left: 89%;
+      }
+}
+

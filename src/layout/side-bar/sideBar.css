@@ -1,28 +1,43 @@
-.sidebar {
-    width: 265px;
-    
-    background: linear-gradient(180deg, #1FA8C9 0.16%, rgba(0, 0, 0, 0.70) 220.71%);
-    padding: 0px 25px;
-    height: 100%;
-    flex-direction: column;
-justify-content: flex-end;
-align-items: center;
-transition: width 0.3s ease;
-flex-shrink: 0;
-text-decoration: none;
-    color:  #FFF;
-    font-family: Saira;
 
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+ .sidebar {
+    width: 250px;
+    background: #1FA8C9;
+    transition: width 0.3s ease;
+
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+   
+  overflow-y: auto; 
+    overflow-x: hidden;  
+   
+ }
+ .sidebar-layout {
+    display: flex;
+   
+    flex-direction: row;
 }
+
 .sidebar.closed {
-    width: 80px; 
-    height: 100%;
-    
-  }
-  
+    width: 60px;
+
+    overflow-y: visible;
+    overflow-x: visible;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color:  #1FA8C9;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -36,32 +51,18 @@ text-decoration: none;
 .logo img {
     max-width: 100%;
     height: auto;
-    margin: 0px 15px;
+    margin: 0px 13px;
 }
 .menu-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-.menu-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    margin: 10px 0;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
 
-.menu-item:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-  }
-  .sidebar.closed .menu-item span {
-    display: none;
-  }
+
 .menu-item i {
     margin-right: 15px;
-    color: #904dac;
+    color: #f3effe !important;
     margin: 0px 10px;
 }
 .menu-item.selected {
@@ -72,50 +73,209 @@ text-decoration: none;
 }
 a {
     text-decoration: none;
-    color:  #FFF;
-    font-family: Saira;
-
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    color: black;
 }
-.icons{
-    margin: 0px 10px;
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
 }
-
+.navbar {
+    grid-column: 2;
+    grid-row: 1;
+    background: #FFF;
+    box-shadow: 5px 3px 30px 0px rgba(0, 0, 0, 0.09);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.nav-links li a:hover {
+    color: #904dac;
+}
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+.nav-user i {
+    font-size: 20px;
+    color: black;
+}
+.main-content {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+}
+.menu-item {
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 0.5px solid #C0C0C0;
+}
 .sub-menu {
+    list-style-type: none;
+}
+ .sub-menu li a:hover , .sub-menu li a{
+    color: white;
+}
+.menu-item:hover  {
+
+    color: white;
+}
+
+.menu-item-text{
+    color: white;
+}
+.menu-item i {
+    margin-right: 15px;
+    color: #904dac;
+}
+.menu-item.selected {
+    background-color: #f3effe;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.sidebar.closed .sub-menu {
+ 
+    position: absolute;
+    left: 60px; 
+    top: 0;
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 7px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-item:hover .sub-menu {
+    display: block; 
+}
+
+.sidebar.closed .menu-item:hover .sub-menu {
+    display: block; 
+}
+
+.sidebar.closed .menu-item:hover {
+    position: relative;
+}
+
+ .sidebar.closed .menu-item span { display: none; } 
+ .sidebar.closed .menu-item{ width: 73px;padding: 20px 0px; height: 100%; margin-left: -34px;}
+.sidebar.closed .sub-menu li a:hover, .sub-menu li a {
+
+    color: #000 !important;
+    font-size: 15px;
+
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.sidebar.closed .sub-menu:hover  {
+    background: #397c8f;
+    padding: 10px 10px !important;
+    border-radius: 4px;
+    color: #fff !important;
+    
+}
+.sidebar.closed .sub-menu:hover.sub-menu li a {
+    font-size: 17px;
+}
+.sidebar.closed .sub-menu:hover i {
+    margin-right: 15px;
+    color: #fff !important;
+    margin: 0px 30px;
+}
+
+
+ .sidebar.closed  .menu-item i ,.sidebar.closed .menu-item i {
+    margin-right: 15px;
+    color: #10566A !important;
+    margin: 0px 30px;
+}
+
+.sidebar.closed .logo img {
+  display: none;
+}
+ .row{
+    width: 100.5%;
+ }
+ 
+ .sidebar.closed  .sub-menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-top: 10px; /* لإضافة مساحة بين العنصر الرئيسي والقائمة الفرعية */
-    background-color: rgba(255, 255, 255, 0.1); /* لون الخلفية للقائمة الفرعية */
-    padding-left: 15px; /* لإضافة مسافة من اليسار */
+    position: absolute;
+    left: 100%;
+    top: 0;
+    padding-left: 19px;
+    z-index: 1000;
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    color: #000;
+    border: 1px solid #e3e3e3;
+    border-radius: 7px;
+    margin: 0px 5px;
 }
 
-.sub-menu-item {
-    padding: 10px 0; /* إضافة مساحة داخل عناصر القائمة الفرعية */
-    color: #FFF; /* لون النص */
+.menu-item:hover .sub-menu {
+    display: block;
 }
 
-.sub-menu-item a {
-    color: #FFF; /* لون النص في الروابط */
+.menu-item {
+    position: relative; 
 }
 
-.sub-menu-item a:hover {
-    text-decoration: underline; /* تأثير عند التمرير */
+.icons-header{
+    color: white !important;
+}
+
+.sssss{
+    color: red !important;
 }
 
 
-.flex{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-section {
     display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensures it stretches fully */
 }
 
-
-
-.h{
-    background: #FFF;
-    box-shadow: 5px 3px 30px 0px rgba(0, 0, 0, 0.09);
-width: 100%;
-height: 72px;
-
+.main-content {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #f4f4f4;
+    padding: 20px;
 }

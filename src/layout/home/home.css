@@ -1,0 +1,19 @@
+/* CSS */
+.headers {
+    width: 100%;
+    background-color: red;
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+}
+
+.row {
+    width: 100%; /* Ensures the row takes full width */
+}
+
+.container {
+    width: 100%; /* Ensure the container is also set to 100% */
+}
+
+.col-md-12 {
+    width: 100%; /* Already should be the case with Bootstrap */
+}

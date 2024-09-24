@@ -175,13 +175,13 @@ line-height: normal;
 }
   [dir=ltr] .aa span  {
     position: absolute;
-    bottom: 20px;
+    bottom: 13px;
     left: 3%;
 }
 
 [dir=ltr] .aa .password-toggle {
     position: absolute;
-    bottom: 15%;
+    bottom: 13%;
 
     cursor: pointer;
     left: 89%;
@@ -242,7 +242,10 @@ line-height: normal;
 }
 .input-invalid:focus{
     border: 2px solid red !important; 
+     box-shadow:none !important;
 }
+
+
 .error-message {
     color: red;
     font-size: 0.875rem;

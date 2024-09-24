@@ -14,7 +14,7 @@ const InputEmail: React.FC<InputEmailProps> = ({ value, placeholder, onChange, o
     return (
         <div className="input-email-container">
             <input
-                type="email"
+                type="text"
                 className={`form-control ${isInvalid ? 'input-invalid' : ''}`}
                 placeholder={placeholder}
                 value={value}
