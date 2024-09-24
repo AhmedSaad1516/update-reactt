@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+}
+.header{
+background-image: url(../../assets/image/download.png);
+display: flex;
+align-content: center;
+
+    width: 100%;
+    background-size: 100% 100%;
+    padding: 40px 30px;
+}
+.header-text{
+
+height: 80.01px;
+margin-left: 55px;
+
+}
+.all{
+    margin-bottom: 150px;
+}
+
+
+
+
+.auth-login {
+    text-align: center;
+    margin: auto;
+    margin: 20px 0; 
+}
+
+
+
+.form-container {
+
+    margin: auto;
+    width: 566px;
+ 
+}
+.auth-login h2{
+    color: #1C1C1C;
+
+    font-family: Saira;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.auth-login span{
+    color:  #1C1C1C;
+
+    font-family: Saira;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.auth-login p {
+    color: #202224;
+
+    font-family: Saira;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+label{
+    color:  #1C1C1C;
+
+
+font-family: Saira;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.btn-login {
+    background-color:#22B9DD;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+height: 52px;
+padding: 17px 16px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+      margin: 80px auto;
+    color: #FFF;
+text-align: center;
+
+
+font-family: Saira;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.btn-login:hover {
+    background-color: #0088cc;
+    color: #fff;
+}
+
+.all{
+    width: 100%;
+}
+
+
+
+
+.aa {
+    position: relative;
+}
+
+
+.aa span img:focus{
+    position: absolute;
+    bottom: 10px !important;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.aa .password-toggle:focus {
+    position: absolute;
+    bottom: 50% !important;
+    right: 50px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.aa input::placeholder {
+  
+    position: absolute;
+    left: 50px;
+}
+
+
+
+
+
+[dir=rtl] .aa input::placeholder {
+    position: absolute;
+    right: 40px;
+    text-align: right !important; 
+}
+[dir=rtl] .aa .password-toggle {
+    position: absolute;
+    bottom: 3%;
+    left: 50px !important; 
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+[dir=rtl] .aa span img {
+    position: absolute;
+    bottom: 4px;
+    left: 94%;
+    transform: translateY(-50%);
+}
+[dir=ltr] .email-icon  {
+    position: absolute;
+    bottom: -4px;
+    left: 3%;
+ 
+}
+  [dir=ltr] .aa span  {
+    position: absolute;
+    bottom: 20px;
+    left: 3%;
+}
+
+[dir=ltr] .aa .password-toggle {
+    position: absolute;
+    bottom: 15%;
+
+    cursor: pointer;
+    left: 89%;
+} 
+.aa input:focus {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.aa .form-control:focus {
+    padding: 0px 50px;
+}
+.aa .form-control {
+    padding: 1.375rem 2.75rem !important;
+}
+@media screen and (min-width: 500px) and (max-width: 750px) {
+    .form-container {
+        width: 100%;
+    }
+
+    input {
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 8px !important;
+        border: 1px solid #C0C0C0 !important;
+        width: 95% !important;
+        box-sizing: border-box;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    .btn-login {
+        background-color: #22B9DD;
+        border: none;
+        padding: 15px;
+        border-radius: 12px;
+        color: #fff;
+        font-weight: bold;
+        width: 95%;
+        height: 52px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-family: Saira;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+    label {
+        color: #1C1C1C;
+        font-family: Saira;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+    }
+}
+.input-invalid:focus{
+    border: 2px solid red !important; 
+}
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+  
+}
+
+/*
+
+*/
+

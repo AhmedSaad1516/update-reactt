@@ -1,0 +1,27 @@
+{
+    "Login": {
+        "welcome": "مرحبا 👋",
+        "loginMethod": "يمكنك تسجيل الدخول باستخدام",
+        "prompt": "الرجاء إدخال البريد الإلكتروني وكلمة المرور للمتابعة",
+        "labelUserName": "اسم المستخدم",
+        "placeholderUserName": "أدخل اسمك",
+        "labelEmail": "البريد الإلكتروني",
+        "placeholderEmail": "أدخل بريدك الإلكتروني",
+        "labelPassword": "كلمة المرور",
+        "placeholderPassword": "أدخل كلمة المرور الخاصة بك",
+        "buttonLogin": "تسجيل الدخول"
+    },
+    "btnLang":{
+     "ar":"Arabic",
+     "en":"English"
+    },
+
+
+    "validatorsInputs":{
+        "required": "هذا الحقل مطلوب",
+        "minLength": "يجب أن يكون الحقل {minLength} أحرف على الأقل",
+        "maxLength": "يجب أن يكون الحقل {maxLength} أحرف على الأكثر",
+        "email": "الرجا�� ��دخال بريد ��لكتروني ��الح",
+        "password": "كلمة المرور يجب أن تكون 8 أحرف على الأقل ويحتوي على حروف وارقام وحرفات مختلفة"
+    }
+}

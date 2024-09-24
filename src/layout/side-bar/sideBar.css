@@ -1,0 +1,121 @@
+.sidebar {
+    width: 265px;
+    
+    background: linear-gradient(180deg, #1FA8C9 0.16%, rgba(0, 0, 0, 0.70) 220.71%);
+    padding: 0px 25px;
+    height: 100%;
+    flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+transition: width 0.3s ease;
+flex-shrink: 0;
+text-decoration: none;
+    color:  #FFF;
+    font-family: Saira;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.sidebar.closed {
+    width: 80px; 
+    height: 100%;
+    
+  }
+  
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin: 0px 15px;
+}
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+  }
+  .sidebar.closed .menu-item span {
+    display: none;
+  }
+.menu-item i {
+    margin-right: 15px;
+    color: #904dac;
+    margin: 0px 10px;
+}
+.menu-item.selected {
+    background-color: #f3effe;
+}
+.selected {
+    background-color: #f3effe;
+}
+a {
+    text-decoration: none;
+    color:  #FFF;
+    font-family: Saira;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.icons{
+    margin: 0px 10px;
+}
+
+.sub-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px; /* لإضافة مساحة بين العنصر الرئيسي والقائمة الفرعية */
+    background-color: rgba(255, 255, 255, 0.1); /* لون الخلفية للقائمة الفرعية */
+    padding-left: 15px; /* لإضافة مسافة من اليسار */
+}
+
+.sub-menu-item {
+    padding: 10px 0; /* إضافة مساحة داخل عناصر القائمة الفرعية */
+    color: #FFF; /* لون النص */
+}
+
+.sub-menu-item a {
+    color: #FFF; /* لون النص في الروابط */
+}
+
+.sub-menu-item a:hover {
+    text-decoration: underline; /* تأثير عند التمرير */
+}
+
+
+.flex{
+    display: flex;
+}
+
+
+
+.h{
+    background: #FFF;
+    box-shadow: 5px 3px 30px 0px rgba(0, 0, 0, 0.09);
+width: 100%;
+height: 72px;
+
+}

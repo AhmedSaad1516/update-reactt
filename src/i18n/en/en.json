@@ -1,0 +1,27 @@
+{
+    "Login": {
+        "welcome": "Welcome 👋",
+        "loginMethod": "You can login with",
+        "prompt": "Please enter your email and password to continue",
+        "labelUserName":"User Name",
+        "placeholderUserName": "Enter your Name",
+        "labelEmail": "Email",
+        "placeholderEmail": "Enter your Email",
+        "labelPassword": "Password",
+        "placeholderPassword": "Enter your Password",
+        "buttonLogin": "Login"
+    },
+
+    "btnLang":{
+        "ar":"العربية",
+        "en":"الانجليزيه"
+       },
+      "validatorsInputs": {
+    "required": "This field is required",
+    "minLength": "The field must be at least {minLength} characters long",
+    "maxLength": "The field must be no more than {maxLength} characters long",
+    "email": "Please enter a valid email address",
+    "password": "The password must be at least 8 characters long and contain letters, numbers, and special characters"
+}
+
+}
