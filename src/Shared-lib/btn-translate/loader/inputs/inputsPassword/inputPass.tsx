@@ -15,7 +15,7 @@ const InputPass: React.FC<InputPassProps> = ({ value, placeholder, onChange, onB
     return (
         <div>
             <input
-                type={passwordVisible ? 'text' : 'password'} // Switch between text and password
+                type={passwordVisible ? 'text' : 'password'} 
                 className={`form-control ${isInvalid ? 'input-invalid' : ''}`}
                 placeholder={placeholder}
                 value={value}

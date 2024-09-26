@@ -1,19 +1,24 @@
-// AuthGuard.tsx
 import React, { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
 
 interface AuthGuardProps {
-    children: ReactNode; // تحديد نوع children
+    children?: ReactNode; 
 }
 
 const AuthGuardLogin: React.FC<AuthGuardProps> = ({ children }) => {
-    const token = localStorage.getItem('token'); // تحقق من وجود الـ token
+    const token = localStorage.getItem('token');  
 
     if (token) {
-        return <Navigate to="/dashboard" />; // إعادة توجيه المستخدم إلى صفحة الدخول
-    } else
 
-    return <>{children}</>; // إذا كان المستخدم مسجلاً الدخول، قم بعرض المحتوى
+        return <>{children &&<Navigate to="/dashboard" />}</>
+      
+    }else{
+
+        return <>{children || <Navigate to="/login" />}</>;
+    }
+
+
+    
 };
 
 export default AuthGuardLogin;

@@ -21,7 +21,7 @@
     margin: 0px 20px;
     position: absolute;
     bottom: 16% !important;
-    left: 10%;
+    left: 6%;
     border-radius: 26px;
 
 }
@@ -30,9 +30,9 @@
     height: 44px;
     margin: 0px 20px;
     position: absolute;
-    bottom: 26% !important;
-    left: 83%;
-    border-radius: 26px;
+    bottom: 23% !important;
+    left: 84%;
+    border-radius: 27px;
   }
 .btn-en {
     margin: 0px 100px;
@@ -61,5 +61,5 @@
 [dir=rtl] .alls-btns span {
     position: absolute;
     bottom: 32% !important;
-    right: 89% !important;
+    right: 93% !important;
 } 

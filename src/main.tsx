@@ -8,9 +8,15 @@ import i18next from "i18next";
 import { I18nextProvider } from "react-i18next";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import AuthGuardLayout from './core/AuthGuard/AuthGuard.tsx';
-import AuthGuardLogin from './core/AuthLayout/AuthLayout.tsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import AuthGuardLogin from './core/AuthLayout/AuthLayout.tsx';
 import SideBar from './layout/side-bar/sideBar.tsx';
+import AccountRequest from './layout/Account/Account-requset.tsx';
+import CompanyRequest from './layout/Company-request/Company-request.tsx';
+import CertifiedRequest from './layout/Certified-request/Certified-request.tsx';
+
+
+ import  './index.css';
 
 const savedLang = localStorage.getItem("lang") || "en";
 i18next.init({
@@ -33,34 +39,36 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} />
-          
-          <Route 
-            path="/login" 
-            element={
-              <AuthGuardLogin>
-                <Login />
-              </AuthGuardLogin>
-            } 
-          />
 
-          <Route
-            path="/dashboard"
-            element={
-              <AuthGuardLayout>
-                <SideBar /> {/* This layout includes the fixed SideBar */}
-              </AuthGuardLayout>
-            }
-          >
-            {/* Nested routes inside MainLayout */}
-            <Route path="" element={<Home />} />  {/* Default page under dashboard */}
-            {/* Add other routes here as needed */}
-          </Route>
+      
+          <Route path="/login" element={
+           
+              <Login />
+        
+          } />
+
+        
+         
+  <Route path="/request" element={<SideBar />}>
+=    <Route index element={<Home />} />  
+  </Route>
+  <Route path="/Acc" element={<SideBar />}>
+    <Route index element={<AccountRequest />} />  
+  </Route>
+  <Route path="/company-request" element={<SideBar />}>
+    <Route index element={<CompanyRequest />} />  
+  </Route>
+  <Route path="/certified-request" element={<SideBar />}>
+    <Route index element={<CertifiedRequest />} />  
+  </Route>
+ 
+ 
 
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       </BrowserRouter>
     </I18nextProvider>
-  </StrictMode>
+  </StrictMode>,
 );
 
 i18next.on('languageChanged', (lng) => {

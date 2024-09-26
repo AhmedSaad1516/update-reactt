@@ -80,31 +80,29 @@ line-height: normal;
 }
 
 .btn-login {
-    background-color:#22B9DD;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    color: #fff;
-    font-weight: bold;
-    width: 100%;
-    border-radius: 12px;
-    display: flex;
-height: 52px;
+    background-color:#22B9DD !important;
+    border: none !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    display: flex !important;
+height: 52px !important;
 padding: 17px 16px !important;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-      margin: 80px auto;
-    color: #FFF;
-text-align: center;
-
-
-font-family: Saira;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+      margin: 80px auto !important;
+    color: #FFF !important;
+text-align: center !important;
+font-family: Saira !important;
+font-size: 20px !important;
+font-style: normal !important;
+font-weight: 400 !important;
+line-height: normal !important;
 }
 
 .btn-login:hover {
@@ -251,7 +249,13 @@ line-height: normal;
     font-size: 0.875rem;
   
 }
-
+.form-control:focus {
+    color: var(--bs-body-color);
+    border-color: #86b7fe;
+    outline: 0;
+     box-shadow: 0 0 0 .10rem #397c8f !important ;
+     border: 2px solid  #397c8f !important ;
+}
 /*
 
 */
