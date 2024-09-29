@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './SideBar.css';
 
 function SideBar() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(() => {
+        const savedState = localStorage.getItem('sidebarOpen');
+        return savedState === 'true'; 
+    });
     const [requestsOpen, setRequestsOpen] = useState(false); 
+    const [requestsOpenUser, setRequestsOpenUser  ] = useState(false); 
+    const [requestsOpenUserManagement ,setRequestsOpenUserManagement ] = useState(false); 
+
+
+    
+    useEffect(() => {
+        localStorage.setItem('sidebarOpen', open);
+    }, [open]);
 
     const toggleSidebar = () => {
         setOpen(!open);
@@ -80,9 +91,112 @@ function SideBar() {
                                     </ul>
                                 )}
                             </li>
+                            <li className="nav-items py-3">
+                                <div className="nav-link" onClick={() => setRequestsOpenUser(!requestsOpenUser)} style={{ cursor: 'pointer' }}>
+                                    <i className="fa-solid fa-user pe-2"></i>
+                                    <span className={`d-none-767 span-nav ${open ? '' : 'd-none'}`}>Users</span>
+                                    <i className={`icons fa-solid ${requestsOpenUser ? 'fa-chevron-up' : 'fa-chevron-down'} ms-auto`}></i>
+                                </div>
+                                {requestsOpenUser && open && (
+                                    <ul className="sidebarNav-submenu">
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-accountants"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span>Accountant</span>
+                                            </NavLink>
+                                        </li>
 
+
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-certified"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span>Certified</span>
+                                            </NavLink>
+                                        </li>
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-interviewers"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span>Interviewer</span>
+                                            </NavLink>
+                                        </li>
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-availability"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span>Availability</span>
+                                            </NavLink>
+                                        </li>
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-instructor"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span> Instructor</span>
+                                            </NavLink>
+                                        </li>
+
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-company"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span> Company</span>
+                                            </NavLink>
+                                        </li>
+                                        
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/user-subscription"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span> Subscription</span>
+                                            </NavLink>
+                                        </li>
+                                       
+                                       
+                                    </ul>
+                                )}
+                            </li>
+                            <li className="nav-items py-3">
+                                <div className="nav-link" onClick={() => setRequestsOpenUserManagement(!requestsOpenUserManagement)} style={{ cursor: 'pointer' }}>
+                                    <i className="fa-solid fa-users pe-2"></i>
+                                    <span className={`d-none-767 span-nav ${open ? '' : 'd-none'}`}>User Management</span>
+                                    <i className={`icons fa-solid ${requestsOpenUserManagement ? 'fa-chevron-up' : 'fa-chevron-down'} ms-auto`}></i>
+                                </div>
+                                {requestsOpenUserManagement && open && (
+                                    <ul className="sidebarNav-submenu">
+                                        <li className="nav-items py-2">
+                                            <NavLink
+                                                to="/payments"
+                                                className={({ isActive }) => isActive ? 'nav-link nav-links routerLink' : 'nav-link'}
+                                                onClick={closeRequestsMenu} 
+                                            >
+                                                <span>Payments</span>
+                                            </NavLink>
+                                        </li>
+
+
+                                      
+                                       
+                                    </ul>
+                                )}
+                            </li>
                             {[
-                                { name: 'Users', icon: 'user', path: '/users' },
+                             
                                 { name: 'User Management', icon: 'users', path: '/user-management' },
                                 { name: 'Questions', icon: 'circle-question', path: '/questions' },
                                 { name: 'Accreditation Management', icon: 'certificate', path: '/accreditation' },
@@ -153,3 +267,5 @@ function SideBar() {
 }
 
 export default SideBar;
+
+

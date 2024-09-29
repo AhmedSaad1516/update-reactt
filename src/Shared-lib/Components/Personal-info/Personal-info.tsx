@@ -1,9 +1,16 @@
-
-function PersonalInfo() { 
+interface dataTilte{
+    titleHeader :string
+}
+function PersonalInfo({titleHeader}:dataTilte) { 
     return (
         <>
 
-<div className="row justify-content-center mb-5">
+<div className="bgSeccion row justify-content-center mb-5">
+<div className="pt-3">
+                    <h1 className="sec-font-color title">{titleHeader}</h1>
+                </div>
+                <hr style={{ color: 'rgb(141, 140, 140)' }} />
+
                         <div className="row mt-5 mb-3">
                             <div className="col-lg-4 col-md-6 info mb-5">
                                 <div>

@@ -1,0 +1,39 @@
+.myP{
+    padding: 10px 0px !important;
+    line-height: 2;
+    color:  #1C1C1C;
+font-family: Saira;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+}
+.myUl {
+    position: relative;
+    list-style-type: none; 
+    padding-left: 25px; 
+  }
+  
+  .myUl .myUlLi {
+    margin: 20px 5px;
+    position: relative; 
+    padding-left: 25px; 
+    color:#0F1A29;
+font-family: Saira;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+  
+  .myUl .myUlLi::before {
+    content: '' !important; 
+    border-radius: 9px !important; 
+    background: #22B9DD !important; 
+    width: 18px !important; 
+    height: 18px !important;
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+  }
+  

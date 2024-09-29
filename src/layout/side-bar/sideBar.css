@@ -7,15 +7,13 @@
   }
   
   .routerLink {
-    background: #397c8f !important;
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff !important;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 10px 10px;
+    color:  #0E4E5D;
+    font-family: Saira;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
-  
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -53,11 +51,22 @@
   .bg-main {
     background-color: var(--main-color);
   }
-  
+
+  .bg{
+    border-radius: 16px !important;
+    background: #F9F9F9;
+    padding: 20px 0px;
+}
+.bgSeccion{
+  border-radius: 16px !important;
+  background: #FFF !important;
+}
+
   .nav-link {
     color: white;
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
   }
   .navbar {
     position: relative;
@@ -71,19 +80,24 @@
     box-shadow: 5px 3px 30px 0px rgba(0, 0, 0, 0.09);
 }
    .nav-items:hover{
-    background: #397c8f !important;
     font-size: 15px;
     font-weight: 500;
     color: #fff !important;
     cursor: pointer;
     border-radius: 10px;
+    padding: 0;
+    margin: 0;
   }
   .nav-link:hover{
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff !important;
-    cursor: pointer;
-    opacity: 0.8;
+    color: #0E4E5D;
+  cursor: pointer;
+    font-family: Saira;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
   }
   hr {
     color: white;
@@ -220,10 +234,27 @@ line-height: normal;
   }
   
   .custom-table th {
-    background-color: var(--main-color);
-    color: white;
-    font-weight: normal;
-    padding: 10px;
+    border-bottom: 1px solid  #EAECF0;
+     background:  #22B9DD; 
+     color:  #FFF;
+     padding: 12px 23px;
+     font-family: Saira;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+  }
+  .customNew-table th {
+    border-bottom: 1px solid  #E9F8FC;
+    background:  #E9F8FC;
+    color:  #667085;
+    padding: 12px 23px;
+    font-family: Saira;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
   }
   
   .custom-table tbody tr td {
@@ -231,6 +262,14 @@ line-height: normal;
     font-weight: normal;
     padding: 10px;
     height: 39px;
+    padding: 20px 23px;
+  }
+  .customNew-table tbody tr td {
+    color: var(--font-color);
+    font-weight: normal;
+    padding: 10px;
+    height: 39px;
+    padding: 20px 23px;
   }
   
   .myBtn-info {
@@ -239,6 +278,51 @@ line-height: normal;
     font-weight: 700;
   }
   
+  .myBtnNew-info {
+    border-radius: 8px;
+    background: #79AEDB;
+    color: white;
+  }
+  .myBtn-view 
+    {
+      border-radius: 8px;
+  background:  #22B9DD;
+  width: 123px;
+  height: 40px;
+  color: #FAF7F2;
+  font-family: Saira;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  padding: 8px 16px;
+  gap: 9px;
+  
+  }
+
+
+  .myBtn-view-add
+  {
+    border-radius: 4px;
+    background:  #22B9DD;
+    display: inline-flex;
+padding: 8px 16px;
+align-items: center;
+gap: 9px;
+color: #FFF;
+text-align: start;  
+font-family: Saira;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+  .myBtnNew-danger{
+    border-radius: 8px;
+    background:  #FEEEEE;
+    color: #AE3A3E;    font-family: Saira;
+  }
   .myBtn-success {
     border-radius: 3.443px;
     background:  #E9F6ED;
@@ -274,6 +358,20 @@ line-height: normal;
     border-radius: 3.443px;
     background:#F5F5F5;
     color:  #626262;
+    font-family: Saira;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px 10px;
+    width: 113.557px;
+    height: 41.314px;
+  }
+  .myBtnNew-back {
+    border-radius: 8px;
+    border: 1px solid  #22B9DD;
+    background: #FFF;
+    color:  #22B9DD;
     font-family: Saira;
     font-size: 16px;
     font-style: normal;
@@ -564,7 +662,8 @@ line-height: normal;
 }
 .bgs{
   border-radius: 16px !important;
-background: #FFF;
+  background: #FFF !important;
+
 
 }
 .textsss{
@@ -661,3 +760,39 @@ line-height: normal !important;
   float: right;
 
 }
+.input-box{
+  width: 18px;
+height: 18px;
+flex-shrink: 0;
+}
+
+.status{
+  border-radius: 16px;
+background:  #ECFDF3;
+color: #027A48;
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.rbc-today {
+  border-radius: 5px !important;
+  border: 2px solid #22B9DD !important;
+  background: #E9F8FC !important;
+  width: 152px !important;
+  height: 140px !important;
+
+}
+.ql-toolbar.ql-snow
+ { border: 1px solid transparent !important;
+   box-sizing: border-box !important;
+   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+    padding: 8px !important;
+    background: #F8F8F8 !important;
+    border-radius: 8px !important;
+     }
+     .ql-container.ql-snow {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+  }

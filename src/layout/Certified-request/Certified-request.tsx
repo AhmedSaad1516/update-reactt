@@ -1,6 +1,8 @@
 import React from 'react';
 import RequestsHeader from '../../Shared-lib/Components/Requests/Requests-header';
 import BtnAudit from '../../Shared-lib/Components/btns/btn-audit/btn-audit';
+import Courses from '../../Shared-lib/Components/Courses/Courses';
+import CertifiedExam from '../../Shared-lib/Components/CertifiedExam/CertifiedExam';
 function CertifiedRequest() {
     const personalInfo = [
         { icon: "fa-regular fa-user", label: "Full Name", detail: "Jane Cooper" },
@@ -16,10 +18,7 @@ function CertifiedRequest() {
         detail: "Selection"
     });
 
-    const courses = Array(2).fill({
-        label: "Course Name",
-        detail: "Selection"
-    });
+  
 
     return (
         <>
@@ -50,112 +49,26 @@ function CertifiedRequest() {
                     </div>
                 </section>
 
-                <section>
-                    <h2 className="sec-font-color title">Professional Certifications</h2>
-                    <hr style={{ color: "rgb(141, 140, 140)" }} />
-                    <div className="row justify-content-center mb-5">
-                        {certificates.map((cert, index) => (
-                            <div key={index} className="row mt-5 mb-3">
-                                <label className=" fw-bold text-dark">{cert.label}</label>
-                                <div className="col-11 certificate px-3">
-                                    <div className="row align-items-center justify-content-between">
-                                        <div className="col-lg-1 text-lg-end text-start">
-                                            <i className="fa-regular fa-file-pdf"></i>
-                                        </div>
-                                        <div className="col-lg-9">
-                                            <p className="mb-1 header-details">{cert.detail}</p>
-                                            <p className="m-0  opacity-50">JPG, PNG or PDF, file size no more than 10MB</p>
-                                        </div>
-                                        <div className="col-lg-2 text-end">
-                                            <button className="btn downloadBtn" type="button">
-                                                <i className="fa-solid fa-download"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+          
+                    <Courses  labelHeader='Coures' 
+                     coursesList={[
+                        { label: "Courses Name", detail: "Selection" },
+                        { label: "Courses Name", detail: "Another Selection" }
+                     ]
+                       
+                     }
+                    />
+             <Courses  labelHeader='Coures' 
+                     coursesList={[
+                        { label: "Courses Name", detail: "Selection" },
+                        { label: "Courses Name", detail: "Another Selection" }
+                     ]
+                       
+                     }
+                    />
 
-                <section>
-                    <h2 className="sec-font-color title">Courses</h2>
-                    <hr style={{ color: "rgb(141, 140, 140)" }} />
-                    <div className="row justify-content-center mb-5">
-                        {courses.map((course, index) => (
-                            <div key={index} className="row mt-5 mb-3">
-                                <label className=" fw-bold text-dark">{course.label}</label>
-                                <div className="col-11 certificate px-3">
-                                    <div className="row align-items-center justify-content-between">
-                                        <div className="col-lg-1 text-lg-end text-start">
-                                            <i className="fa-regular fa-file-pdf"></i>
-                                        </div>
-                                        <div className="col-lg-9">
-                                            <p className="mb-1 header-details">{course.detail}</p>
-                                            <p className="m-0  opacity-50">JPG, PNG or PDF, file size no more than 10MB</p>
-                                        </div>
-                                        <div className="col-lg-2 text-end">
-                                            <button className="btn downloadBtn" type="button">
-                                                <i className="fa-solid fa-download"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
-                <section>
-                    <h2 className="sec-font-color title">Certified Exam</h2>
-                    <hr style={{ color: "rgb(141, 140, 140)" }} />
-                    <div className="row justify-content-center mb-5">
-                        <div className="row mt-5 mb-3">
-                            <div className="col-11 certificate">
-                                <div className="container position-relative">
-                                    <div className="position-absolute pass-container">
-                                        <p className="px-2 pass-pos m-0 col-lg-2 text-center passed">
-                                            <i className="fa-regular fa-thumbs-up"></i> Passed
-                                        </p>
-                                    </div>
-                                    <div className="row text-md-start text-center justify-content-center">
-                                                <div className="col-lg-4 col-md-6 ps-md-5 mb-2 fw-bold">Points:</div>
-                                                <div className="col-lg-8 col-md-6 row">
-                                                    <p className="m-0 col-lg-12">40/70</p>
-
-                                                </div>
-                                                <div className="col-lg-4 col-md-6 ps-md-5 mb-2 fw-bold">Percentage:</div>
-                                                <div className="col-lg-8 col-md-6 row">
-                                                    <p className="m-0 col-lg-12">60%</p>
-                                                </div>
-                                                <div className="col-lg-4 col-md-6 ps-md-5 mb-2 fw-bold">Duration:</div>
-                                                <div className="col-lg-8 col-md-6 row">
-                                                    <p className="m-0 col-lg-12">00:00:24</p>
-                                                </div>
-                                                <div className="col-lg-4 col-md-6 ps-md-5 mb-2 fw-bold">Date started:</div>
-                                                <div className="col-lg-8 col-md-6 row">
-                                                    <p className="m-0 col-lg-12">Tue 10 Sep 24 04:00</p>
-                                                </div>
-                                                <div className="col-lg-4 col-md-6 ps-md-5 mb-2 fw-bold">Date finished:</div>
-                                                <div className="col-lg-8 col-md-6 row">
-                                                    <p className="m-0 col-lg-12">Tue 10 Sep 24 04:00</p>
-                                                </div>
-                                            </div>
-                                            <div className="ms-md-5 ms-2 ps-2 mt-4 feedback">
-                                                <p className="fw-bold pt-4">Feedback</p>
-                                                <p className="pb-4">
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-                                                    exercitationem commodi eveniet delectus, illum doloremque neque,
-                                                    beatae
-                                                    autem enim rerum sint in labore voluptas, sit impedit iure hic rem
-                                                    esse?
-                                                </p>
-                                            </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                     <CertifiedExam titleHeader='Certified Exam'/>
+        
 
                 <footer className="col-11 mb-4 px-5">
                     <div className="text-end">

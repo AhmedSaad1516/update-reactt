@@ -9,9 +9,9 @@ function BtnAudit({ childrenTitle, className , childrenIcon }: PersonalInfoProps
     return (
         <>
           <button className={`btn ${className}`} type="button">
-          {childrenTitle}
           
-            {childrenIcon} 
+          {childrenIcon}
+          {childrenTitle}
       
         </button>
      
